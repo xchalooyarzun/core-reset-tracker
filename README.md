@@ -8,7 +8,7 @@ La plataforma permite registrar entrenamientos diarios, consumo de proteína, me
 
 ## Demo en vivo
 
-https://TU-URL-VERCEL.vercel.app
+https://https://core-reset-tracker.vercel.app/
 
 ---
 
