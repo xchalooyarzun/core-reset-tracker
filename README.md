@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# CoreReset Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación personal de seguimiento físico diseñada para registrar progreso corporal, disciplina diaria y hábitos de entrenamiento.
 
-Currently, two official plugins are available:
+La plataforma permite registrar entrenamientos diarios, consumo de proteína, mediciones corporales semanales y visualizar el progreso mediante gráficos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Demo en vivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://TU-URL-VERCEL.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologías utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- TailwindCSS
+- Recharts
+- LocalStorage
+- Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Perfil personal
+Configuración inicial con nombre, peso inicial, peso actual, peso meta y meta diaria de proteína.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Registro diario
+Permite registrar:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- tipo de entrenamiento
+- peso de mancuerna
+- agua consumida
+- creatina
+- nivel de energía
+- notas
+- alimentos proteicos
+
+### Sumador inteligente de proteína
+Sistema para agregar alimentos con proteína y calcular automáticamente el total diario.
+
+### Control corporal semanal
+Registro semanal de:
+
+- peso
+- brazos
+- piernas
+- pectorales
+- espalda
+- cintura
+
+### Dashboard de progreso
+Panel visual con:
+
+- peso actual
+- progreso hacia la meta
+- estado diario
+- resumen del último entrenamiento
+
+### Gráficos de evolución
+Visualización del progreso con gráficos de:
+
+- peso
+- brazos
+- cintura
+- proteína diaria
+
+### Historial completo
+Consulta de registros diarios y controles semanales anteriores.
+
+---
+
+## Instalación local
+
+```bash
+git clone https://github.com/TU-USUARIO/core-reset-tracker.git
+cd core-reset-tracker
+npm install
+npm run dev
+
+Autor
+
+Gonzalo Oyarzun
+
+Proyecto desarrollado como herramienta personal de seguimiento físico y como parte de mi portafolio de desarrollo frontend.
+
+GitHub:
+https://github.com/xchalooyarzun
